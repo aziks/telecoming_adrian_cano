@@ -14,19 +14,59 @@ body{
 
 }
 
+.menu_icon {
+  position: absolute;
+  padding: 20px 16px;
+  height: 68px;
+  width: 68px;
+  margin-top: 20px;
+}
+
+.icon_container {
+  position: relative;
+  height: 28px;
+  width: 36px;
+}
+
+.top,
+.mid,
+.bot {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 36px;
+  border-radius: 2px;
+  background: black;
+}
+.top {
+  top: 0;
+  transform-origin: 34px 2px;
+}
+
+.bot {
+  bottom: 0;
+  transform-origin: 34px 2px;
+}
+
+.mid {
+  top: 12px;
+}
+
 .box{
   padding: 15px;
   margin-bottom: 30px;
   background: #FFF;
   border-radius: 2px;
-  -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .box img{
   width: 100%;
 }
+
+/* BOTONES */
 
 .buttons_box{
   width: 86%;
@@ -60,6 +100,8 @@ button{
   box-shadow: none;
 }
 
+/* INPUTS */
+
 .input_box{
   padding: 10px;
 }
@@ -83,10 +125,13 @@ button{
   color: white;
 
 }
+
+/*LOGO SPRITES*/
+
 .logo_box{
   width: 206px;
   height: 126px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 .logo_box div{
@@ -111,14 +156,179 @@ button{
   background:url(../imagenes/logo-4.png);
 }
 
+/* CENTRAR CUADRADO */
+
+.outter_box{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #58708B;
+
+}
+
+.black_inner_box{
+    width: 50px;
+    height:50px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+}
+
+/* FLEXBOX VERSION */
+/*
+.outter_box{
+  width: 100%;
+  height:300px;
+  background: #58708B;
+  display: flex;
+  align-items: center;
+}
+
+.black_inner_box{
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: black;
+  vertical-align: middle;
+}
+*/
+
+/*SIMPLE MENU*/
+
+.menu-bar{
+  width: 100%;
+  height: 150px;
+  text-align: center;
+
+}
+
+.menu-bar a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu-bar ul{
+  padding: 0;
+}
+
+div.menu-bar ul ul {
+  display: none;
+  width: inherit;
+  margin-top: 5px;
+}
+
+div.menu-bar li{
+  display: block;
+  float: left;
+  width: 33%;
+  height: 30px;
+  color: white;
+  padding-top: 5px;
+}
+
+div.menu-bar ul li{
+  border-bottom: inset 2px black;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  background: #4B8EFF;
+}
+
+div.menu-bar ul ul li{
+  border: none;
+  display: block;
+  width: inherit;
+  border-bottom: inset 2px #5AA0D8;
+}
+
+div.menu-bar ul ul li:nth-child(even){
+  background: #669DDD;
+}
+
+div.menu-bar ul ul li:nth-child(odd){
+  background: #9CCDFF;
+}
+
+div.menu-bar li:hover > ul {
+  display: block;
+  width: 100%;
+  float: none;
+}
+
+/* LISTAS */
+
+.lists ul{
+  padding: 0;
+}
+
+.list_a li{
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin: 2px;
+}
+
+.list_a li:nth-child(odd){
+  background: black;
+}
+
+.list_a li:nth-child(even){
+  background: #557790;
+}
+
+.list_b ul{
+  float: left;
+  width: 50%;
+}
+
+.list_b li{
+  display: block;
+  width: 96%;
+  height: 30px;
+  margin: 2%;
+}
+
+.list_b ul:nth-child(odd) li:nth-child(even){
+  background: black;
+}
+
+.list_b ul:nth-child(odd) li:nth-child(odd){
+  background: #557790;
+}
+
+.list_b ul:nth-child(even) li:nth-child(odd){
+  background: black;
+}
+
+.list_b ul:nth-child(even) li:nth-child(even){
+  background: #557790;
+}
+
+
+
 .social_icon{
   margin: 0 10px;
 }
 
 footer{
   height: 150px;
-  padding-top: 30px;
+  padding-top: 40px;
   background: white;
   text-align: center;
 
+}
+
+@media (max-width: 420px) {
+  .header {
+    height: 300px;
+  }
+  .logo_container img{
+    margin: 0 auto;
+  }
+  .menu_icon{
+    display: none;
+  }
 }
